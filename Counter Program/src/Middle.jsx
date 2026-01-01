@@ -6,10 +6,10 @@ function Middle() {
     return (
         <main>
                 <div className="main">
-                    <h2>{count}</h2>
-                    <button onClick={() => setCount(count - 1)}>Decrease</button>
-                    <button onClick={() => setCount(0)}>Reset</button>
-                    <button onClick={() => setCount(count + 1)}>Increase</button>
+                    <p>{count}</p>
+                    <button className="decBtn" onClick={() => setCount(count - 1)}>Decrease</button>
+                    <button className="resetBtn" onClick={() => setCount(0)}>Reset</button>
+                    <button className="incBtn" onClick={() => setCount(count + 1)}>Increase</button>
                 </div>    
         </main>
     );
