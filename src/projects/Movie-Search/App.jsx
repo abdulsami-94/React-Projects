@@ -15,7 +15,13 @@ function App() {
         setLoading(true);
 
         const res = await fetch(
-            `https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_TMDB_API_KEY}&query=${query}`
+            `https://api.themoviedb.org/3/search/movie?query=${query}`,
+            {
+                headers: {
+                    'Authorization': `Bearer ${import.meta.env.VITE_TMDB_READ_ACCESS_TOKEN}`,
+                    'Content-Type': 'application/json',
+                }
+            }
         );
         const data = await res.json();
 
