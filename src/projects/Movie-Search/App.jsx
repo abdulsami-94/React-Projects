@@ -14,18 +14,16 @@ function App() {
 
         setLoading(true);
 
-        const res = await fetch(
-            `https://api.themoviedb.org/3/search/movie?query=${query}`,
-            {
-                headers: {
-                    'Authorization': `Bearer ${import.meta.env.VITE_TMDB_READ_ACCESS_TOKEN}`,
-                    'Content-Type': 'application/json',
-                }
-            }
-        );
+        const res = await fetch(`/.netlify/functions/tmdb-proxy?q=${encodeURIComponent(query)}`);
         const data = await res.json();
 
-        setMovies(data.results);
+        if (data.error) {
+            console.error(data.error);
+            setMovies([]);
+        } else {
+            setMovies(data.results || []);
+        }
+
         setLoading(false);
     }
 
