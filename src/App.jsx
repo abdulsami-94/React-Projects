@@ -9,6 +9,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true}}></Router>
         <Route path="/project/:id" element={<ProjectPage />} />
       </Routes>
     </Router>

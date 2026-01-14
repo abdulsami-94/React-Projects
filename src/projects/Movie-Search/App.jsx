@@ -10,20 +10,8 @@ function App() {
     const [loading, setLoading] = useState(false);
 
     async function searchMovies() {
-        if (!query) return;
-
-        setLoading(true);
-
-        const res = await fetch(`/.netlify/functions/tmdb-proxy?q=${encodeURIComponent(query)}`);
-        const data = await res.json();
-
-        if (data.error) {
-            console.error(data.error);
-            setMovies([]);
-        } else {
-            setMovies(data.results || []);
-        }
-
+        // Removed API call for local learning
+        setMovies([]); // Static empty list for now
         setLoading(false);
     }
 
