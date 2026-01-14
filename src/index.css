@@ -2,8 +2,8 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #213547;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #000000;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -13,19 +13,19 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #ffffff;
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
+  color: #cccccc;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 h1 {
@@ -34,20 +34,20 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  border-radius: 4px;
+  border: 1px solid #333333;
+  padding: 0.5em 1em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #646cff;
-  color: white;
+  background-color: #333333;
+  color: #ffffff;
   cursor: pointer;
-  transition: background-color 0.25s;
+  transition: background-color 0.2s;
 }
 
 button:hover {
-  background-color: #535bf2;
+  background-color: #555555;
 }
 
 button:focus,
@@ -58,16 +58,16 @@ button:focus-visible {
 /* Component Styles */
 
 .navbar {
-  background-color: #fff;
+  background-color: #000000;
   padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-bottom: 1px solid #333333;
   margin-bottom: 0;
 }
 
 .navbar a {
   margin-right: 1rem;
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -90,78 +90,46 @@ button:focus-visible {
 }
 
 .project-card {
-  background: #fff;
-  border-radius: 8px;
+  background-color: #111111;
+  border: 1px solid #333333;
+  border-radius: 4px;
   padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  border-color: #555555;
 }
 
 .project-card h2 {
   margin-top: 0;
-  color: #333;
+  color: #ffffff;
 }
 
 .project-card p {
-  color: #666;
+  color: #cccccc;
 }
 
 .project-card a {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #646cff;
-  color: white;
+  background-color: #333333;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.2s;
 }
 
 .project-card a:hover {
-  background-color: #535bf2;
+  background-color: #555555;
 }
 
 .project-page {
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-  }
-  body {
-    background-color: #242424;
-  }
-  .navbar {
-    background-color: #333;
-    color: #fff;
-  }
-  .navbar a {
-    color: #fff;
-  }
-  .project-card {
-    background: #333;
-    color: #fff;
-  }
-  .project-card h2 {
-    color: #fff;
-  }
-  .project-card p {
-    color: #ccc;
-  }
-  .project-page {
-    background: #333;
-    color: #fff;
-  }
+  background-color: #111111;
+  border: 1px solid #333333;
+  border-radius: 4px;
 }
