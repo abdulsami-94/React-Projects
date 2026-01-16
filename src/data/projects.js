@@ -1,6 +1,5 @@
 import Counter from '../projects/Counter/Counter';
 import App from '../projects/Movie-Search/App';
-import Portfolio from '../projects/Portfolio/Portfolio';
 
 const projects = [
   {
@@ -14,12 +13,6 @@ const projects = [
     title: 'Movie Search App',
     description: 'Simple Movie Search App using TMDB API',
     component: App,
-  },
-  {
-    id: 'Portfolio',
-    title: 'Portfolio',
-    description: 'Single page Portfolio',
-    component: Portfolio,
   }
 ];
 
