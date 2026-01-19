@@ -1,12 +1,17 @@
-import { useParams } from 'react-router-dom';
+import ProjectCard from '../components/ProjectCard';
 import projects from '../data/projects';
 
 function ProjectPage() {
-  const { id } = useParams();
-  const project = projects.find(p => p.id === id);
-  if (!project) return <div className="project-page">Project not found</div>;
-  const Component = project.component;
-  return <div className="project-page"><Component /></div>;
+  return (
+    <div className="project">
+      <h1>Project Gallery</h1>
+      <div className="project-grid">
+        {projects.map(project => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default ProjectPage;
