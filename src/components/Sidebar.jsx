@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 
-function Sidebar() {
+function Sidebar({isOpen, setIsOpen}) {
     const { theme, toggleTheme } = useContext(ThemeContext);
 
     return (
-        <aside className="fixed left-0 top-0 h-full w-64 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 transition-colors hidden md:flex flex-col">
+        <aside className={`fixed left-0 top-0 h-full w-64 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 transition-all duration-300 z-40 
+  ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'} 
+  flex flex-col`}>
                 <div className="p-4">
                     <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Projects</h2>
                     <ul className="space-y-2">
