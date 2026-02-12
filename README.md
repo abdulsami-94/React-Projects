@@ -9,7 +9,9 @@ This is a single React application that serves as a gallery for multiple sub-pro
     - `Counter/`: Contains the Counter project component and its styles.
     - `Weather/`: Contains the Weather project component and its styles.
     - `MovieSearch/`: Contains the Movie Search project component and its styles.
+    - `Notes-App/`: Persistent Notes application built with `useEffect` and `useRef`.
   - `data/`: Stores data files, such as the projects metadata and component references.
+  - `context/`: Global React Context providers (e.g., `ThemeContext.jsx`).
   - `pages/`: Contains page-level components that represent different views in the app.
     - `Home.jsx`: Displays the project gallery list.
     - `ProjectPage.jsx`: Loads and displays a specific project based on the route parameter.

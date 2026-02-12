@@ -5,22 +5,24 @@ import ProjectPage from './pages/ProjectPage';
 import Navbar from './components/Navbar';
 import { ThemeContext } from './context/ThemeContext.jsx';
 import { useContext } from 'react';
+import Sidebar from './components/Sidebar.jsx';
 
 function App() {
     const { theme } = useContext(ThemeContext);
 
   return (
-
-    <div style={{ backgroundColor: theme === 'light' ? '#fff' : '#333', color: theme === 'light' ? '#000' : '#fff'}}>
     <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true}}>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/project" element={<ProjectPage />} />
-        <Route path="/project/:id" element={<Project />} />
-      </Routes>
-    </Router>
+    <div className={`${theme} min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300`}>
+      <Sidebar />
+        <main className="flex-1 md:ml-64 p-8">  
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/project" element={<ProjectPage />} />
+                <Route path="/project/:id" element={<Project />} />
+            </Routes>
+        </main>
     </div>
+    </Router>
   );
 }
 

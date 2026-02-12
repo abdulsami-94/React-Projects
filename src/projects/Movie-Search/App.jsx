@@ -11,7 +11,7 @@ function App() {
 
     async function searchMovies() {
         // Removed API call for local learning
-        setMovies([]); // Static empty list for now
+        setMovies([]); 
         setLoading(false);
     }
 
