@@ -27,11 +27,11 @@ function Sidebar({isOpen, setIsOpen}) {
                     </ul>
                 </div>
                 <div className="p-4 border-t border-gray-100 dark:border-gray-800">
-                    <button onClick={ toggleTheme } className="flex items-center w-full p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <button onClick={ toggleTheme } className="flex items-center w-full p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors cursor-pointer">
                         <span className="mr-3"> {theme === 'light' ? '🌙' : '☀️'}</span>
                         <span className="text-sm font-medium"> {theme === 'light' ? 'Dark' : 'Light'} Mode </span>
                     </button>
-                    <button className="flex items-center w-full p-2 mt-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <button className="flex items-center w-full p-2 mt-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer">
                         <span className="mr-3"> ⚙️ </span>
                         <span className="text-sm font-medium"> Settings</span>
                     </button>

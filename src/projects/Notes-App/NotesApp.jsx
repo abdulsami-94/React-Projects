@@ -23,6 +23,10 @@ function NotesApp() {
         inputRef.current.focus();
     }
 
+    function handleDeleteNote(indexToDelete) {
+        setNotes(notes.filter((_, index) => index !== indexToDelete));
+    }
+
     useEffect(() => {localStorage.setItem('myNotes', JSON.stringify(notes));}, [notes]);
     
     return (
@@ -35,7 +39,10 @@ function NotesApp() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {notes.map((note, index) => (
-                    <p className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 min-h-[100px] break-words" key={index}>{note}</p>
+                    <div key={index} className="group relative p-4 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 min-h-[100px]">
+                        <p className="break-words pr-8">{note}</p>
+                        <button onClick={() => handleDeleteNote(index)} className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 p-1 text-gray-400 hover:text=red-500 transition-all"> X </button> 
+                    </div>
                 ))}
             </div>
         </div>
