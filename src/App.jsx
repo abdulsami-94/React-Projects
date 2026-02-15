@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Project from "./pages/Project";
 import ProjectPage from './pages/ProjectPage';
-import Navbar from './components/Navbar';
 import { ThemeContext } from './context/ThemeContext.jsx';
 import { useContext, useState , useEffect } from 'react';
 import Sidebar from './components/Sidebar.jsx';
@@ -20,7 +19,7 @@ function App() {
     
   return (
     <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true}}>
-    <div className=" min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
+    <div className={`min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300 flex`}>
       {isOpen && (<div onClick={() => setIsOpen(false)} className="fixed inset-0 bg-black/50 z-30 md:hidden" />)}
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
         <main className="flex-1 md:ml-64 p-8">  
